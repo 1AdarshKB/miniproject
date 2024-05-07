@@ -2,7 +2,7 @@ fet();
 
 function fet(){
     console.log("ping")
-    fetch("http://dummytest.pythonanywhere.com/status")
+    fetch("https://dummytest.pythonanywhere.com/status")
     .then((res)=>(res.json()))
     .then((json)=>{
         console.log(json.access_status)
@@ -15,7 +15,7 @@ function fet(){
             document.getElementById("status").style.color="red";
         }
     })
-    fetch("http://dummytest.pythonanywhere.com/get_data")
+    fetch("https://dummytest.pythonanywhere.com/get_data")
     .then((res)=> (res.json()))
     .then((json)=>{
         var data=json.data;
