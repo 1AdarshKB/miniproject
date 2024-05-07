@@ -20,21 +20,18 @@ function fet(){
         var data=json.data;
         var data_len=data.length;
         var box=["temp","humi","heart","spo","date"];
-var avg_temp=0
-var avg_heart=0;
+var temp=0
+var heart=0;
 
 
         for(var i=0;i<=box.length-1;i++){
-            document.getElementById(box[i]).innerHTML="<td>"+data[i][0]+"</td>";
-		avg_heart=avg_heart+Number(data[i][2]);
-		avg_temp=avg_temp+Number(data[i][0]);
-		
+            document.getElementById(box[i]).innerHTML="<td>"+data[i][0]+"</td>";		
             for(var j=1;j<=data_len-1;j++){
                 document.getElementById(box[i]).innerHTML+="<td>"+data[i][j]+"</td>"
             }
         }
-	heart=avg_heart/5;
-	temp=avg_temp/5;
+	heart=data[4][2];
+	temp=data[4][0];
 console.log(heart);
 console.log(temp);
 
