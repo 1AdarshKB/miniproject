@@ -16,6 +16,9 @@ h4{
 h4 > p{
     margin: 0;
 }
+h3 > b{
+    
+}
 table{
     width: 100%;
     border-collapse: collapse;
